@@ -1,6 +1,7 @@
 # tinyfrog
 
-A Python library for creating and manipulating [TinyFrog]() files.
+A networking library that simplifies common networking tasks, such as making HTTP requests,
+and adds some useful features, such as retrying requests.
 
 ## Installation
 
@@ -13,20 +14,10 @@ pip install tinyfrog
 ```python
 import tinyfrog
 
-# Create a new TinyFrog file
-frog = tinyfrog.TinyFrog()
+# Make a GET request with retrying
+response = tinyfrog.get_with_retries("https://example.com")
 
-# Add a new entry
-frog.add_entry("Hello, world!")
 
-# Save the file
-frog.save("hello.frog")
-
-# Load the file
-frog = tinyfrog.TinyFrog("hello.frog")
-
-# Print the contents
-print(frog.entries[0])
 ```
 
 ## License
