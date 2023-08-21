@@ -31,9 +31,4 @@ def get_with_retries(url: str, **kwargs) -> requests.Response:
     
     return retryable_get(url, **kwargs)
 
-# Usage
-try:
-    response = get_with_retries("https://example.com", max_tries=3)  # User-defined max_tries
-    print(response.text)
-except requests.RequestException as e:
-    print("All retry attempts failed:", e)
+
